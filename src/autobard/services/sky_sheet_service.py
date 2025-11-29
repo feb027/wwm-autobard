@@ -73,17 +73,23 @@ class SkySheetService:
         self._current_file = path
         self._events = []
         
-        # Handle array wrapper (some formats wrap in array)
-        if isinstance(data, list) and len(data) > 0:
-            data = data[0]
+        # Handle different formats
+        if isinstance(data, list):
+            # Check if it's a list of note objects directly (like [{time, key}, ...])
+            if len(data) > 0 and isinstance(data[0], dict) and 'key' in data[0]:
+                # Direct array of notes
+                song_notes = data
+                data = {'name': path.stem, 'bpm': 120}
+            elif len(data) > 0:
+                # Array wrapper around song object
+                data = data[0]
+                song_notes = data.get('songNotes', []) or data.get('notes', [])
+            else:
+                song_notes = []
+        else:
+            song_notes = data.get('songNotes', []) or data.get('notes', [])
         
         self._raw_data = data
-        
-        # Extract song notes
-        song_notes = data.get('songNotes', [])
-        if not song_notes:
-            # Try alternate format
-            song_notes = data.get('notes', [])
         
         name = data.get('name', path.stem)
         bpm = data.get('bpm', 120)
