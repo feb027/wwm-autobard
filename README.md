@@ -59,7 +59,7 @@ Transform MIDI files and Sky: Children of the Light sheets into live performance
 ### Download & Run
 
 1. **Download** [`WWM_AutoBard.exe`](https://github.com/feb027/wwm-autobard/releases/latest) from Releases
-2. **Run** the executable (no installation needed)
+2. **Run as Administrator** (right-click → Run as administrator) — *required for the game to recognize key presses*
 3. **Open** a MIDI or Sky sheet file
 4. **Start** the game and enter instrument mode
 5. **Press F10** to play!
