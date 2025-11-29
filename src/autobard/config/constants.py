@@ -1,0 +1,22 @@
+"""Application constants."""
+
+# Application info
+APP_NAME = "WWM Auto-Bard"
+APP_VERSION = "1.0.0"
+
+# Default configuration values
+DEFAULT_INPUT_DELAY_MS = 50
+DEFAULT_PLAYBACK_SPEED = 1.0
+DEFAULT_HOTKEY_START = "f10"
+DEFAULT_HOTKEY_STOP = "f12"
+DEFAULT_WINDOW_OPACITY = 0.9
+
+# Playback limits
+MIN_PLAYBACK_SPEED = 0.5
+MAX_PLAYBACK_SPEED = 2.0
+MIN_INPUT_DELAY_MS = 0
+MAX_INPUT_DELAY_MS = 500
+
+# Window dimensions
+WINDOW_WIDTH = 300
+WINDOW_HEIGHT = 200

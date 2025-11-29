@@ -1,0 +1,59 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Config (user-specific)
+config.json
+
+# Music files (user data)
+*.mid
+*.midi
+*.skysheet
+# Keep sample files in resources/
+
+# Factory
+.factory/
+
+# PRD and planning docs
+*PRD*.md
+tasks/
+
+# Sample songs in resources (keep only code)
+resources/*.txt
+resources/*.json
+resources/*.mid
+
+# Root level data files
+*.json
+!pyproject.json
+
+# Sample songs (keep only README)
+samples/*.txt
+samples/*.json
+samples/*.mid
